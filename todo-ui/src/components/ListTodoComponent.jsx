@@ -13,7 +13,6 @@ function ListTodoComponent() {
   function listTodos() {
     getAllTodos()
       .then((response) => {
-        console.log(response.data);
         setTodos(response.data);
       })
       .catch((error) => {
@@ -26,7 +25,6 @@ function ListTodoComponent() {
   }
 
   function updateTodo(id) {
-    console.log(id);
     navigator(`/update-todo/${id}`);
   }
 
@@ -51,7 +49,6 @@ function ListTodoComponent() {
   function removeTodo(id) {
     deleteTodo(id).then((response) => {
         listTodos();
-        console.log(response.data);
       })
       .catch((error) => {
         console.log(error);

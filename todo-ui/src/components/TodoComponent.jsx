@@ -13,7 +13,6 @@ const TodoComponent = () => {
     if (id) {
       getTodo(id)
         .then((response) => {
-          console.log(response.data);
           setTitle(response.data.title);
           setDescription(response.data.description);
           setCompleted(response.data.completed);
